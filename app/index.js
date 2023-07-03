@@ -5,6 +5,8 @@ import { StyleSheet } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { COLORS, icons, images, SIZES } from '../constants';
 import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome } from '../components';
+import Calendar from 'react-native-calendars/src/calendar';
+
 
 
 const Home = () => {
@@ -40,20 +42,36 @@ const Home = () => {
         </View>
       </View>
 
-      <View style={{ flexDirection: 'row' }}>
-        <View style={styles.boxAttendance}>
-          <Text style={styles.boxTextAttendance}>Box 1</Text>
-        </View>
-      </View>
-      <Popularjobs />
-      <View style={{ flexDirection: 'row' }}>
-        <View style={styles.boxImage}>
-          <Image
-            source={require('../assets/images/chest.jpg')}
-            style={{ height: 400, width: '100%', borderRadius: 20 }}
+      
+          
+          <Calendar style={{borderRadius:25, elevation: 4, margin: 10, backgroundColor: COLORS.black}}
+             markedDates={{
+              '2023-07-03': {
+                selected: true,
+                selectedColor: 'blue',
+                customStyles: {
+                  container: {
+                    backgroundColor: 'blue',
+                    borderRadius: 10,
+                    elevation: 4,
+                    margin: 5,
+                  },
+                  text: {
+                    color: COLORS.white,
+                    fontWeight: 'bold',
+                  },
+                },
+              },
+            }}
+            theme={{
+              selectedDayBackgroundColor: 'blue',
+              dayTextColor: 'black',
+              backgroundColor: 'black',
+
+            }}
           />
-        </View>
-      </View>
+
+      <Popularjobs />
       
       </ScrollView>
     </SafeAreaView>
@@ -78,7 +96,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 20,
+    // overflow: 'hidden',
   },
+
   boxImage: {
     flex: 1,
     height: 400,
