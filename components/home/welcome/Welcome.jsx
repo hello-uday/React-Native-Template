@@ -16,7 +16,7 @@ const Welcome = () => {
         fontSize: 30,
         color:"#F3F4F8"
       }}
-      // USER PROFILE PHOTO LINK
+      // USER PROFILE PHOTO Name
       >Hi User</Text>
     </View>
   )

@@ -12,21 +12,19 @@ const Popularjobs = () => {
   const error = false;
 
   const jobs = [
-    { id: 1, imageKey: 'kemal' },
-    { id: 2, imageKey: 'chest' },
-    { id: 3, imageKey: 'kemal' },
-    { id: 4, imageKey: 'kemal' },
-    { id: 5, imageKey: 'kemal' },
-    { id: 6, imageKey: 'kemal' },
+    { id: 1, imageKey: 'back' },
+    { id: 2, imageKey: 'shoulder' },
+    { id: 3, imageKey: 'chest' },
+    { id: 4, imageKey: 'leg' },
+    { id: 5, imageKey: 'bicep' },
+    { id: 6, imageKey: 'tricep' },
   ];
   
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Personalized Plan</Text>
-        <TouchableOpacity>
-          <Text style={styles.headerBtn}>View all</Text>
-        </TouchableOpacity>
+        
       </View>
     <View style={styles.cardsContainer}>
     {
