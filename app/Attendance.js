@@ -1,44 +1,45 @@
-import React from 'react'
-import { SafeAreaView, View} from 'react-native-safe-area-context'
-import { COLORS, icons, images, SIZES } from '../constants';
+import React from 'react';
+import { SafeAreaView, View, TouchableOpacity, Text } from 'react-native';
 import { Calendar } from 'react-native-calendars';
+import { COLORS } from '../constants';
+import FitnessQuoteButton from './FitnessQuoteButton'
 
 const Attendance = () => {
+
   return (
+    <View style={{ flex: 1,backgroundColor: COLORS.black }}>
+      <View style={{ flex: 1 }}>
+        <Calendar style={{borderRadius:25, elevation: 4, margin: 10, backgroundColor: COLORS.gray, }}
+          
+        />
+      </View>
 
-        <Calendar style={{borderRadius:25, elevation: 4, margin: 10, backgroundColor: COLORS.black}}
-             markedDates={{
-              '2023-07-03': {
-                selected: true,
-                selectedColor: 'blue',
-                customStyles: {
-                  container: {
-                    backgroundColor: 'blue',
-                    borderRadius: 10,
-                    elevation: 4,
-                    margin: 5,
-                  },
-                  text: {
-                    color: COLORS.white,
-                    fontWeight: 'bold',
-                  },
-                },
-              },
-            }}
-            theme={{
-              selectedDayBackgroundColor: 'blue',
-              dayTextColor: 'black',
-              backgroundColor: 'black',
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 30,paddingVertical: 270 }}>
+        <TouchableOpacity
+          style={{ backgroundColor: COLORS.gray3, paddingVertical: 20,paddingHorizontal: 20, borderRadius: 30 }}r
+          onPress={() => {
 
-            }}
-          />
-    )
-}
+            // code that Handle left button press
+
+          }}
+        >
+          <Text style={{ color: COLORS.lightWhite, fontWeight: 'bold' }}>     CheckIN     </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={{ backgroundColor: COLORS.gray3, paddingVertical: 20, paddingHorizontal: 20, borderRadius: 30 }}
+          onPress={() => {
+
+            //  code that Handle right button press
+
+          }}
+        >
+          <Text style={{ color: COLORS.lightWhite, fontWeight: 'bold' }}>    CheckOUT    </Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+    
+  );
+};
 
 export default Attendance;
-
-
-
-
-{/* <Attendance /> */}
-// import Attendance from './Attendance';
