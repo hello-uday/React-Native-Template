@@ -103,13 +103,11 @@ const TabNavigator = createMaterialBottomTabNavigator(
     Image: {
       screen: ImageScreen,
       navigationOptions: {
-        tabBarLabel: 'History',
+        tabBarLabel: 'Images',
         tabBarIcon: ({ tintColor }) => (
           <Icon style={{ color: tintColor }} size={25} name={'ios-images'} />
         ),
-        activeColor: '#615af6',
-        inactiveColor: '#46f6d7',
-        barStyle: { backgroundColor: '#67baf6' },
+        barStyle: { backgroundColor: COLORS.black },
       },
     },
     Attendance: {
@@ -128,9 +126,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
         tabBarIcon: ({ tintColor }) => (
           <Icon style={{ color: tintColor }} size={25} name={'ios-person'} />
         ),
-        activeColor: '#f60c0d',
-        inactiveColor: '#f65a22',
-        barStyle: { backgroundColor: '#f69b31' },
+        barStyle: {backgroundColor: COLORS.black },
       },
     },
   },
