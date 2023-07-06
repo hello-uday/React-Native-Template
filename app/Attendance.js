@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaView, View, TouchableOpacity, Text } from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import { COLORS } from '../constants';
-import FitnessQuoteButton from './FitnessQuoteButton'
+import FetchQuote from './FetchQuote'
 
 const Attendance = () => {
 
@@ -14,9 +14,17 @@ const Attendance = () => {
         />
       </View>
 
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 30,paddingVertical: 270 }}>
+      {/* Fitness Quotes */}
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 130 }}>
+        <TouchableOpacity>
+              <FetchQuote/>
+        </TouchableOpacity>
+      </View>
+
+
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 30,paddingVertical: 20 }}>
         <TouchableOpacity
-          style={{ backgroundColor: COLORS.gray3, paddingVertical: 20,paddingHorizontal: 20, borderRadius: 30 }}r
+          style={{ backgroundColor: COLORS.gray3, paddingVertical: 20,paddingHorizontal: 20, borderRadius: 30 }}
           onPress={() => {
 
             // code that Handle left button press
@@ -37,6 +45,7 @@ const Attendance = () => {
           <Text style={{ color: COLORS.lightWhite, fontWeight: 'bold' }}>    CheckOUT    </Text>
         </TouchableOpacity>
       </View>
+      
     </View>
     
   );
